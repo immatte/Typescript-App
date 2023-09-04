@@ -7,8 +7,9 @@ const EventComponent: React.FC = () => {
         console.log("I'm being dragged")
     }
     return(
-        <div>
-            <input onChange={onChange}/>
+        <div className="DragMe">
+            {/* <input onChange={onChange}/> */}
+            <i className="bi bi-arrow-down-circle-fill"></i>
             <div draggable onDragStart={onDragStart}>Drag Me!</div>
         </div>
     );

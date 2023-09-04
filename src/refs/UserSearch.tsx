@@ -2,8 +2,8 @@ import { useState, useRef, useEffect} from "react";
 
 const users = [
     { name: 'Isabelle', age: 20 },
-    { name: 'Vicky', age: 20 },
-    { name: 'Maya', age: 20 }
+    { name: 'Vicky', age: 21 },
+    { name: 'Maya', age: 19 }
 ]
 
 const UserSearch: React.FC = () => {
@@ -29,16 +29,22 @@ const UserSearch: React.FC = () => {
     
     return (
     
-    <div>
-        User Search
+    <div className="UserSearch">
+        <h3>User Search</h3>
         <input 
             ref={inputRef} 
             value={name} 
             onChange={e => setName(e.target.value)}/>
-        <button onClick={onClick}>Find User</button>
         <div>
-            {user && user.name}
-            {user && user.age}
+            <button onClick={onClick}>Find User</button>
+        </div>
+        <div>
+            <div>
+                {user && user.name}
+            </div>
+            <div>
+                {user && user.age} 
+            </div>
         </div>
     </div>
 
