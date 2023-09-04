@@ -9,6 +9,7 @@ return (<div>
     <GuestList/>
     <UserSearch/>
     <EventComponent/>
+    
 </div>
 );
 
